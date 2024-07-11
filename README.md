@@ -39,3 +39,10 @@ The project consists of the following main components:
    ```bash
    git clone https://github.com/your-username/doctor_ui_app.git
    cd doctor_ui_app
+
+
+Open the patient app to book an appointment:
+Open your browser and navigate to http://localhost:3000/patient.html.
+
+Open the doctor's UI to see the appointments:
+Open another tab or window and navigate to http://localhost:3000.
