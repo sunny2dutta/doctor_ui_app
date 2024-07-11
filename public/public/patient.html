@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form id="appointment-form">
+            <div>
+                <label for="patientName">Name:</label>
+                <input type="text" id="patientName" name="patientName" required>
+            </div>
+            <div>
+                <label for="disease">Disease:</label>
+                <input type="text" id="disease" name="disease" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="dateTime">Appointment Date & Time:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+    <script src="patient.js"></script>
+</body>
+</html>
+
