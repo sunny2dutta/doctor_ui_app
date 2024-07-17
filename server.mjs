@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-const appointmentRequests = [
+let appointmentRequests = [
     {
         id: '1',
         patientName: 'John Doe',
@@ -79,6 +79,15 @@ app.post('/api/appointments/reject', (req, res) => {
     } else {
         res.json({ success: false });
     }
+});
+
+app.post('/api/appointments', (req, res) => {
+    const newAppointment = {
+        id: String(appointmentRequests.length + 1),
+        ...req.body
+    };
+    appointmentRequests.push(newAppointment);
+    res.json({ success: true, appointment: newAppointment });
 });
 
 app.listen(port, () => {
